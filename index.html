@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Studios</title>
+    <!-- REQUIRED FOR RECAPTCHA -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+        
+        header {
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .logo-subtext {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px;
+            min-height: 80vh;
+        }
+        
+        .banner {
+            background-color: #888;
+            padding: 40px 50px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .banner-text {
+            color: white;
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        
+        /* Support Form Styles */
+        .support-section {
+            padding: 60px 20px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .support-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: #333;
+        }
+        
+        .formcarry-container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .formcarry-block {
+            margin-bottom: 25px;
+        }
+        
+        .formcarry-block label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .formcarry-block input,
+        .formcarry-block textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .formcarry-block input:focus,
+        .formcarry-block textarea:focus {
+            border-color: #888;
+            outline: none;
+        }
+        
+        .formcarry-block textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .formcarry-block button {
+            background-color: #888;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        .formcarry-block button:hover {
+            background-color: #777;
+        }
+        
+        .g-recaptcha {
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .banner {
+                padding: 30px;
+            }
+            
+            .banner-text {
+                font-size: 20px;
+            }
+            
+            .formcarry-container {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .banner {
+                padding: 25px 20px;
+            }
+            
+            .banner-text {
+                font-size: 18px;
+            }
+            
+            .support-section h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-text">Complex</div>
+            <div class="logo-subtext">studio</div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="banner">
+            <div class="banner-text">complex studios is a rising studio, creating roblox games!</div>
+        </div>
+    </div>
+
+    <div class="support-section">
+        <div class="formcarry-container">
+            <h2>Support</h2>
+            <!-- The form below is valid, you can add or delete fields as you want -->
+            <!-- Please make sure that each form element has name="" attribute like the example below -->
+            <form action="https://formcarry.com/s/uRuHQvBlfKY" method="POST" enctype="multipart/form-data">
+                
+                <div class="formcarry-block">
+                    <label for="fc-generated-1-name">Full Name</label>
+                    <input type="text" name="name" id="fc-generated-1-name" placeholder="Your first and last name" />
+                </div>
+                
+                <div class="formcarry-block">
+                    <label for="fc-generated-1-email">Your Email Address</label>
+                    <input type="email" name="email" id="fc-generated-1-email" placeholder="john@doe.com" />
+                </div>
+                
+                <div class="formcarry-block">
+                    <label for="fc-generated-1-message">Your message</label>
+                    <textarea name="message" id="fc-generated-1-message" placeholder="Enter your message..."></textarea>
+                </div>
+
+                <!-- REQUIRED FOR RECAPTCHA -->
+                <!-- REPLACE YOUR SITE KEY BELOW -->
+                <div class="g-recaptcha" data-sitekey="PASTE_YOUR_SITE_KEY_FROM_RECAPTCHA_CONSOLE_HERE"></div>
+                
+                <div class="formcarry-block">  
+                    <button type="submit">Send</button>
+                </div>
+            
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript can be added here for any interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Page loaded successfully!');
+        });
+    </script>
+</body>
+</html>
